@@ -218,7 +218,6 @@ public class LexicalAnalyzer {
     }
     
     private boolean isKeyword(String word) {
-        // Define the list of keywords
         String[] keywords = {"if", "else", "while", "do", "int", "char", "void"};
         return Arrays.asList(keywords).contains(word);
     }
