@@ -1,8 +1,8 @@
 public class Comment extends Token {
     private String content;
     
-    public Comment(String content) {
-        super(Tag.COMMENT);
+    public Comment(String content, int line, int column) {
+        super(Tag.COMMENT, line, column);
         this.content = content;
     }
     
@@ -15,6 +15,8 @@ public class Comment extends Token {
         return "Comment{" +
                "tag=" + getTag() +
                ", content='" + content + '\'' +
+               ", line=" + getLine() +
+               ", column=" + getColumn() +
                '}';
     }
 }

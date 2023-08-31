@@ -1,8 +1,8 @@
 public class StringLiteral extends Token {
     private String value;
     
-    public StringLiteral(String value) {
-        super(Tag.STRING);
+    public StringLiteral(String value, int line, int column) {
+        super(Tag.STRING, line, column);
         this.value = value;
     }
     
@@ -15,6 +15,8 @@ public class StringLiteral extends Token {
         return "StringLiteral{" +
                "tag=" + getTag() +
                ", value='" + value + '\'' +
+               ", line=" + getLine() +
+               ", column=" + getColumn() +
                '}';
     }
 }

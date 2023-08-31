@@ -1,8 +1,8 @@
 public class ErrorToken extends Token {
     private String errorMessage;
     
-    public ErrorToken(String errorMessage) {
-        super(Tag.ERROR);
+    public ErrorToken(String errorMessage, int line, int column) {
+        super(Tag.ERROR, line, column);
         this.errorMessage = errorMessage;
     }
     
@@ -15,6 +15,8 @@ public class ErrorToken extends Token {
         return "ErrorToken{" +
                "tag=" + getTag() +
                ", errorMessage='" + errorMessage + '\'' +
+               ", line=" + getLine() +
+               ", column=" + getColumn() +
                '}';
     }
 }

@@ -1,8 +1,8 @@
 public class OctalConstant extends Token {
     private String value;
     
-    public OctalConstant(String value) {
-        super(Tag.OCTAL_CONSTANT);
+    public OctalConstant(String value, int line, int column) {
+        super(Tag.OCTAL_CONSTANT, line, column);
         this.value = value;
     }
     
@@ -15,6 +15,8 @@ public class OctalConstant extends Token {
         return "OctalConstant{" +
                "tag=" + getTag() +
                ", value='" + value + '\'' +
+               ", line=" + getLine() +
+               ", column=" + getColumn() +
                '}';
     }
 }

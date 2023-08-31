@@ -1,8 +1,8 @@
 public class HexConstant extends Token {
     private String value;
     
-    public HexConstant(String value) {
-        super(Tag.HEX_CONSTANT);
+    public HexConstant(String value, int line, int column) {
+        super(Tag.HEX_CONSTANT, line, column);
         this.value = value;
     }
     
@@ -15,6 +15,8 @@ public class HexConstant extends Token {
         return "HexConstant{" +
                "tag=" + getTag() +
                ", value='" + value + '\'' +
+               ", line=" + getLine() +
+               ", column=" + getColumn() +
                '}';
     }
 }

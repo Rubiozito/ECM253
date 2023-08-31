@@ -1,8 +1,8 @@
 public class IntConstant extends Token {
     private int value;
     
-    public IntConstant(int value) {
-        super(Tag.INTEGER_CONSTANT);
+    public IntConstant(int value, int line, int column) {
+        super(Tag.INTEGER_CONSTANT, line, column);
         this.value = value;
     }
     
@@ -15,6 +15,8 @@ public class IntConstant extends Token {
         return "IntConstant{" +
                "tag=" + getTag() +
                ", value=" + value +
+               ", line=" + getLine() +
+               ", column=" + getColumn() +
                '}';
     }
 }
